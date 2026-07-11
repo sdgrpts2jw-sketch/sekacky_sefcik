@@ -1,0 +1,139 @@
+git <!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sekačky Šefčík — prodej sekaček | Golf Grabštejn</title>
+  <meta name="description" content="Sekačky Šefčík — prodej sekaček, Golf Grabštejn. Aktuálně v nabídce profesionální vřetenové sekačky Jacobsen na golfová a fotbalová hřiště. Osobní odběr, doprava po dohodě." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="brand">
+        <span class="brand-mark">🌱</span>
+        <span class="brand-text">Sekačky <strong>Šefčík</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#nabidka">Nabídka</a></li>
+        <li><a href="#doprava">Doprava</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="#kontakt" class="btn btn-nav">Poptat</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Sekačky Šefčík</p>
+      <h1>Prověřené sekačky připravené k&nbsp;nasazení</h1>
+      <p class="hero-sub">
+        Aktuálně v nabídce profesionální vřetenové sekačky Jacobsen na golfová
+        a fotbalová hřiště — servisně ošetřené a připravené k okamžitému použití.
+        Osobní odběr v Liberci, doprava po dohodě.
+      </p>
+      <ul class="hero-stats">
+        <li><strong id="stat-count">8</strong><span>strojů v nabídce</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="nabidka">
+      <div class="container">
+        <header class="section-head">
+          <h2>Nabídka sekaček</h2>
+          <p>Klikněte na fotografii pro zvětšení a listování v galerii.</p>
+        </header>
+        <div class="grid" id="mowers"><!-- vyplní script.js --></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="doprava">
+      <div class="container">
+        <header class="section-head">
+          <h2>Doprava a odběr</h2>
+          <p>Vyberte si způsob, který vám vyhovuje.</p>
+        </header>
+        <div class="cards-info">
+          <article class="info-card">
+            <div class="info-icon">📍</div>
+            <h3>Osobní odběr</h3>
+            <p>Prohlídka a vyzvednutí strojů probíhá na golfovém hřišti Grabštejn. Prohlídka je vždy vítána.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-icon">🚚</div>
+            <h3>Doprava po dohodě</h3>
+            <p>Můžeme nabídnout možnost dopravy — dle dohody. Cenu a termín upřesníme podle vaší lokality.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-icon">🛠️</div>
+            <h3>Připraveno k provozu</h3>
+            <p>Stroje jsou servisně ošetřené a připravené rovnou k používání. Rádi zodpovíme technické dotazy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Kontakt</h2>
+          <p>Máte zájem nebo dotaz? Ozvěte se.</p>
+        </header>
+        <div class="contact">
+          <div class="contact-card">
+            <p class="contact-name">Jan Šefčík</p>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Telefon</span>
+                <a href="tel:+420607932216">+420 607 932 216</a>
+              </li>
+              <li>
+                <span class="contact-label">E-mail</span>
+                <a href="mailto:vas@email.cz">sefcik.jan@email.cz</a>
+              </li>
+              <li>
+                <span class="contact-label">Lokalita</span>
+                <span>Golf Grabštejn, Česká republika</span>
+              </li>
+            </ul>
+            <a href="tel:+420607932216" class="btn btn-primary btn-block">Zavolat</a>
+          </div>
+          <div class="contact-note">
+            <h3>Jak to probíhá</h3>
+            <p>
+              Zavolejte nebo napište e-mail s číslem/názvem stroje, o který máte
+              zájem. Domluvíme se na prohlídce, ceně a případné dopravě.
+              Ceny jsou u všech strojů dohodou.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Sekačky Šefčík · Golf Grabštejn</span>
+      <a href="#top" class="footer-top">Nahoru ↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Zavřít">✕</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Předchozí">‹</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Další">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
